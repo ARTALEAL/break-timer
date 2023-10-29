@@ -2,10 +2,12 @@ let countDown;
 const timerDisplay = document.querySelector('.timer-display__left-time');
 const timerEndIn = document.querySelector('.timer-display__end-time');
 const timerButtons = document.querySelectorAll('.timer__button');
+const resetButton = document.querySelector('.timer-display__reset-button');
 
 const timer = (seconds) => {
   clearInterval(countDown);
   displayTimer(seconds);
+  reset();
   const currentTime = Date.now();
   const endTime = currentTime + seconds * 1000;
   displayEndTime(endTime);
@@ -51,3 +53,15 @@ document.timerForm.addEventListener('submit', function (e) {
   timer(Number(this.minutes.value * 60));
   this.reset();
 });
+
+const reset = () => {
+  if (timerDisplay.textContent) {
+    resetButton.classList.add('active');
+    resetButton.addEventListener('click', () => {
+      timer(0);
+      timerDisplay.textContent = '';
+      timerEndIn.textContent = '';
+      resetButton.classList.remove('active');
+    });
+  }
+};

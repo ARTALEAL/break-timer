@@ -31,14 +31,11 @@ body {
   font-size: inherit;
 }
 
-.timerForm__submit-button {
-  transition: 0.3s ease-in-out;
-  font-weight: bold;
-}
-
 .button {
   padding: 1vi 2vi;
   font-size: inherit;
+  transition: 0.3s ease-in-out;
+  font-weight: bold;
 }
 
 .button:hover {
@@ -70,8 +67,6 @@ body {
   min-width: 100px;
   width: 100%;
   text-transform: uppercase;
-  font-weight: bold;
-  transition: 0.3s ease-in-out;
 }
 
 .timer-display__left-time {
@@ -82,6 +77,17 @@ body {
 .timer-display__end-time {
   font-size: clamp(1.875rem, 1.3393rem + 2.6786vw, 3.75rem);
   margin-top: 5vi;
+}
+
+.timer-display__reset-button {
+  margin-top: 5vi;
+  max-width: 40%;
+  width: 100%;
+  display: none;
+}
+
+.active {
+  display: inline-block;
 }
 
 @media screen and (max-width: 416px) {
