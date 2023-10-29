@@ -16,6 +16,13 @@ body {
   text-align: center;
 }
 
+.timerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .timerForm__input {
   margin: 2vi 0;
   padding: 1vi 2vi;
@@ -36,8 +43,7 @@ body {
 
 .button:hover {
   cursor: pointer;
-  box-shadow: 0 0 6px #fff;
-  opacity: 0.85;
+  box-shadow: 0 0 15px #fff;
   scale: 1.1;
 }
 
@@ -66,4 +72,21 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   transition: 0.3s ease-in-out;
+}
+
+.timer-display__left-time {
+  margin-top: 5vi;
+  font-size: 120px;
+}
+
+.timer-display__end-time {
+  font-size: clamp(1.875rem, 1.3393rem + 2.6786vw, 3.75rem);
+  margin-top: 5vi;
+}
+
+@media screen and (max-width: 416px) {
+  .timerForm__submit-button {
+    max-width: 80%;
+    width: 100%;
+  }
 }
