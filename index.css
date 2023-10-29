@@ -36,12 +36,19 @@ body {
   font-size: inherit;
   transition: 0.3s ease-in-out;
   font-weight: bold;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .button:hover {
   cursor: pointer;
   box-shadow: 0 0 15px #fff;
   scale: 1.1;
+}
+
+.button:focus {
+  outline: none;
 }
 
 .timer {
