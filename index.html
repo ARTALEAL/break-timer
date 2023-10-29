@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таймер</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">Таймер на перерыв</h1>
+        <form name="timerForm">
+            <input class="timerForm__input" type="number" name="minutes" placeholder="Введите минуты для отсчёта...">
+            <button class="timerForm__submit-button button" type="submit">Начать</button>
+        </form>
+        <nav class="timer">
+            <ul class="timer__menu">
+                <li class="menu-item"><button data-time="300" class="timer__button button">5 минут</button></li>
+                <li class="menu-item"><button data-time="900" class="timer__button button">15 минут</button></li>
+                <li class="menu-item"><button data-time="1800" class="timer__button button">30 минут</button></li>
+                <li class="menu-item"><button data-time="3600" class="timer__button button">Обед</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="timer-display">
+            <div class="timer-display__left-time"></div>
+            <p class="timer-display__end-time"></p>
+        </div>
+    </main>
+</body>
+
+</html>
